@@ -1,22 +1,23 @@
-# BoooardGame!
+# 2021 KHU DCPRG assignment#2
 <br>
 
-### Boardgame managing system for KHU sherlock
+### Container interaction with docker-compose
 <br>
 
 ### 1. 개요
 
-본 프로젝트는 중앙동아리 셜록을 위한 보드게임 대여 및 관리 시스템입니다. 기본적인 게시판 시스템에 이미지를 첨부할 수 있도록 할 것입니다.
+본 repo는 2021년 1학기 경희대학교 데이터센터 프로그래밍 과목의 2번쩨 과제물입니다.
 
 
 ### 2. 구성
 1. front-end : SpringBoot mustache (HTML, CSS, JS), BootStrap, jQuery
 2. Back-end : SpringBoot
-3. Infra : AWS
+3. DB : Mysql
+3. Infra : Docker
 4. development env : Mac OS
 
 
 ### 3. 특징
-관리자와 비 관리자의 권한을 분할하여, 비 관리자가 대여 신청시 관리자가 이를 확인하여 승인할 수 있도록 할 것입니다.
-이와 더불어, 보드게임의 반납 확인 또한 관리자가 직접 확인한 후 게시글을 삭제할 수 있도록 할 것입니다.
+docker-compose 기능을 활용하기 위해 yml 파일을 작성했습니다.
+하나의 컨테이너에는 springboot을 이용해 작성한 서버를 띄웠고, 나머지 하나의 컨테이너에는 mysql DB를 구동했습니다.
 
