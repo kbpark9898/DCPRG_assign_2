@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+ server:
+  image: kbpark9898/springboot_pkb:1.1
+  tty: true
+  restart: always
+  depends_on:
+   - DB
+  ports:
+   - "10000:8080"
+  container_name: server
+  networks:
+   - some_net
+ DB:
+  image: kbpark9898/mysql_pkb:1.1
+  environment:
+   - MYSQL_ROOT_PASSWORD=123
+   - MYSQL_USER=admin
+   - MYSQL_PASSWORD=password
+   - MYSQL_DATABASE=boooardgame
+  container_name: database
+  restart: always
+  networks:
+   - some_net
+
+networks:
+  some_net:
+    driver: bridge

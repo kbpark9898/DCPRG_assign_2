@@ -1,0 +1,9 @@
+FROM alpine:latest
+USER root
+RUN apk update
+RUN apk fetch openjdk11
+RUN apk add openjdk11
+RUN apk add --no-cache git
+RUN git clone https://github.com/kbpark9898/DCPRG_assign_2.git
+ENV PATH="$JAVA_HOME/bin:${PATH}"    
+RUN java -version
